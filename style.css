@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #131d27;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+menu {
+  border-bottom: 1px solid rgba(119, 119, 119, 0.8);
+  background-color: transparent;
+  position: fixed;
+  width: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.nav_container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_container ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav_container ul li a {
+  line-height: 60px;
+  font-size: 23px;
+  font-weight: 300;
+  letter-spacing: -0.16px;
+  margin: 0 17px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav_container ul li a:hover {
+  color: #ff7d00;
+}
+
+/* ------------------SECTION ------------------ */
+
+.head_title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  letter-spacing: 0.3px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.head_text {
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.46px;
+  line-height: 27px;
+  margin-bottom: 5em;
+}
+
+.proposal_items {
+  display: flex;
+  margin: 40px -25px;
+  counter-reset: proposal-counter;
+  flex-wrap: wrap;
+}
+
+.proposal_item {
+  position: relative;
+  padding: 10px 20px;
+  flex: 1;
+  height: inherit !important;
+  min-height: 150px;
+  background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 0,
+      rgba(255, 255, 255, 0.25) 100%
+    )
+    repeat scroll !important;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  margin: 0 2px 4px 6px !important;
+}
+
+.proposal_item::before {
+  content: counter(proposal-counter, decimal);
+  counter-increment: proposal-counter;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin-left: -30px;
+  text-align: center;
+  border-radius: 50%;
+  color: #ff7d00;
+  font-size: 38px;
+  font-weight: 700;
+  display: table-cell;
+  padding-top: 2px;
+  text-indent: -1px;
+}
+
+.item_title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: -0.19px;
+  margin-top: 38px;
+  margin-bottom: 18px;
+}
+
+.item_text {
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.46px;
+  line-height: 27px;
+}
